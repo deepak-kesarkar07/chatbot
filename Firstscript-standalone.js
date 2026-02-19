@@ -14,10 +14,6 @@ const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
 const toggleBtn = document.getElementById("chat-toggle-btn");
 const closeBtn = document.getElementById("close-btn");
-const emojiBtn = document.getElementById("emoji-btn");
-const emojiPicker = document.getElementById("emoji-picker");
-const fileBtn = document.getElementById("file-btn");
-const fileInput = document.getElementById("file-input");
 
 // =============================
 // TOGGLE CHAT VISIBILITY
@@ -34,46 +30,8 @@ toggleBtn.addEventListener("click", toggleChatVisibility);
 closeBtn.addEventListener("click", toggleChatVisibility);
 
 // =============================
-// EMOJI PICKER FUNCTIONALITY
+// EVENT LISTENERS
 // =============================
-emojiBtn.addEventListener("click", () => {
-  emojiPicker.classList.toggle("hidden");
-});
-
-// Insert emoji into input
-document.querySelectorAll(".emoji-grid span").forEach(emoji => {
-  emoji.addEventListener("click", () => {
-    userInput.value += emoji.textContent;
-    userInput.focus();
-    emojiPicker.classList.add("hidden");
-  });
-});
-
-// Close emoji picker when clicking outside
-document.addEventListener("click", (e) => {
-  if (e.target !== emojiBtn && e.target !== emojiPicker && !emojiPicker.contains(e.target)) {
-    emojiPicker.classList.add("hidden");
-  }
-});
-
-// =============================
-// FILE UPLOAD FUNCTIONALITY
-// =============================
-fileBtn.addEventListener("click", () => {
-  fileInput.click();
-});
-
-fileInput.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (file) {
-    const fileName = file.name;
-    const fileSize = (file.size / 1024).toFixed(2);
-    const fileMessage = `📎 File attached: ${fileName} (${fileSize}KB)`;
-    userInput.value = fileMessage;
-    userInput.focus();
-    e.target.value = ""; // Reset file input
-  }
-});
 sendBtn.addEventListener("click", handleSendMessage);
 
 userInput.addEventListener("keypress", (e) => {
@@ -132,7 +90,7 @@ async function fetchGeminiResponse(userMessage) {
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({}));
+    const error = await response.json();
     throw new Error(error?.error?.message || `API error: ${response.status}`);
   }
 

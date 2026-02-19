@@ -100,8 +100,35 @@ body {
 
 .chat-input-area {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 15px;
   background: rgba(0, 0, 0, 0.15);
+}
+
+.input-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: rgba(79, 70, 229, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.icon-btn:hover {
+  background: rgba(79, 70, 229, 0.9);
+  transform: scale(1.1);
 }
 
 .chat-input-area input {
@@ -112,8 +139,7 @@ body {
   outline: none;
 }
 
-.chat-input-area button {
-  margin-left: 10px;
+.chat-input-area > button {
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
@@ -123,8 +149,42 @@ body {
   transition: 0.3s;
 }
 
-.chat-input-area button:hover {
+.chat-input-area > button:hover {
   background: #3730a3;
+}
+
+.emoji-picker {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.emoji-picker.hidden {
+  display: none;
+}
+
+.emoji-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: flex-start;
+}
+
+.emoji-grid span {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.emoji-grid span:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.2);
 }
 
 .chat-toggle-btn {

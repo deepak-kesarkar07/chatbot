@@ -16,6 +16,11 @@
     <div id="chat-box" class="chat-box"></div>
 
     <div class="chat-input-area">
+      <div class="input-controls">
+        <button id="emoji-btn" class="icon-btn" title="Insert emoji">😊</button>
+        <button id="file-btn" class="icon-btn" title="Upload file">📎</button>
+        <input type="file" id="file-input" style="display: none;" />
+      </div>
       <input 
         type="text" 
         id="user-input" 
@@ -23,6 +28,11 @@
         autocomplete="off"
       />
       <button id="send-btn">Send</button>
+      <div id="emoji-picker" class="emoji-picker hidden">
+        <div class="emoji-grid">
+          <span>😀</span><span>😃</span><span>😄</span><span>😁</span><span>😆</span><span>😅</span><span>🤣</span><span>😂</span><span>🙂</span><span>🙃</span><span>😉</span><span>😊</span><span>😇</span><span>🥰</span><span>😍</span><span>😘</span><span>😗</span><span>😚</span><span>😙</span><span>🥲</span><span>😋</span><span>😛</span><span>😜</span><span>🤪</span><span>😌</span><span>😔</span><span>😑</span><span>😐</span><span>😶</span><span>🤫</span><span>🤨</span><span>😏</span><span>😒</span><span>🙄</span><span>😬</span><span>🤥</span><span>😖</span><span>😣</span><span>😞</span><span>😓</span><span>😩</span><span>😫</span><span>🥱</span><span>😤</span><span>😡</span><span>😠</span><span>🤬</span><span>😈</span><span>💀</span><span>☠️</span><span>💩</span><span>🤡</span><span>👋</span><span>🤚</span><span>🖐️</span><span>✋</span><span>🖖</span><span>👌</span><span>🤌</span><span>✌️</span><span>🤞</span><span>🤟</span><span>🤘</span><span>🤙</span><span>👍</span><span>👎</span><span>☝️</span><span>👆</span><span>👇</span><span>👈</span><span>👉</span><span>☀️</span><span>🌤️</span><span>⛅</span><span>🌥️</span><span>☁️</span><span>🌦️</span><span>🌧️</span><span>⛈️</span><span>🌩️</span><span>🌨️</span><span>❄️</span><span>☃️</span><span>⛄</span><span>💨</span><span>💧</span><span>💦</span><span>☔</span><span>🍏</span><span>🍎</span><span>🍊</span><span>🍋</span><span>🍌</span><span>🍉</span><span>🍇</span><span>🍓</span><span>🍒</span><span>🍑</span><span>🥭</span><span>🍍</span><span>🍅</span><span>🍆</span><span>🥑</span><span>🥦</span><span>🥬</span><span>🥒</span><span>🌶️</span><span>🌽</span><span>🥕</span><span>🍗</span><span>🍖</span><span>🍔</span><span>🍟</span><span>🍕</span><span>🥪</span><span>🍝</span><span>🍜</span><span>🍲</span><span>🍛</span><span>🍤</span><span>🍙</span><span>🍚</span><span>🍰</span><span>🎂</span><span>🧁</span><span>🍪</span><span>🍩</span><span>❤️</span><span>🧡</span><span>💛</span><span>💚</span><span>💙</span><span>💜</span><span>🖤</span><span>🤍</span><span>🎉</span><span>🎊</span><span>🎈</span><span>🎁</span><span>🏆</span><span>🏅</span>
+        </div>
+      </div>
     </div>
   </div>
 
