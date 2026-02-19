@@ -1,8 +1,11 @@
 // =============================
 // CONFIGURATION
 // =============================
-// Add your Google Gemini API key here
-const API_KEY = "AIzaSyB72d-Yypo8W-F2bQao5bjRo5EPzTmf21c";
+// IMPORTANT: Do NOT commit your API key. Create a local file `local-config.js`
+// at the project root with the content:
+//   window.GEMINI_API_KEY = 'your_api_key_here';
+// That file is ignored by git (see .gitignore).
+const API_KEY = window.GEMINI_API_KEY || 'REPLACE_WITH_YOUR_API_KEY';
 const API_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent";
 
 // =============================
