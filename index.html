@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="chat-wrapper" class="chat-wrapper hidden">
+    <div class="chat-header">
+      <span>Gemini AI Chat</span>
+      <button id="close-btn" class="close-btn">✕</button>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="chat-input-area">
+      <input 
+        type="text" 
+        id="user-input" 
+        placeholder="Type your message..."
+        autocomplete="off"
+      />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <button id="chat-toggle-btn" class="chat-toggle-btn" title="Chat with Gemini AI">💬</button>
+
+  <script src="Firstscript.js"></script>
+</body>
+</html>
